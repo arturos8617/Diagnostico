@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "test.h"
 capturar_nombres(){
 	int cifras_tot[5],cont=0,sum_tot=0,x=0;
 	float prom=0;
@@ -31,6 +31,7 @@ void mostrar(int n, char carac[]){
 		}
 	}
 }
+
 main(){
 	char op;
 	char carac[20];
@@ -39,6 +40,7 @@ main(){
 		printf("1.-Capturar Enteros\n");
 		printf("2.-Mostrar Cadena n veces\n");
 		printf("3.-Agregar personaje\n");
+		printf("4.-Mostrar personajes\n");
 		printf("0.-Salir\n");
 		scanf("%c",&op);
 		switch(op){
@@ -46,7 +48,7 @@ main(){
 				capturar_nombres();
 				fflush(stdin);
 				break;
-			/*case '2':
+			case '2':
 			
 				printf("Ingresa un nombre");
 				fflush(stdin);
@@ -55,12 +57,14 @@ main(){
 				scanf("%i",&n);
 				mostrar(n,carac);
 				fflush(stdin);
-				break;*/
+				break;
 			
 			case '3':{
-				
+					capturar_persona();
+					fflush(stdin);
 				}break;
-			
+			case '4': mostrar_personaje();
+					fflush(stdin);
 			default:
 				break;
 			
